@@ -1,0 +1,40 @@
+{
+  "python_executable": "python3",
+  "device_twin_id": "dtwin1",
+  "gateway_start_timeout_s": 90,
+  "runner_ready_timeout_s": 180,
+  "status_timeout_s": 90,
+  "producer_timeout_s": 3600,
+  "runtime": {
+    "libs_dir": "/path/to/native/libs",
+    "model_artifacts_dir": "../model_artifacts",
+    "key_hex": "<64_HEX_CHARACTERS_FOR_AES_256_KEY>",
+    "optee": {
+      "openssl_dir": "/path/to/openssl-1.1.1",
+      "engine_name": "titanssl_agnostic",
+      "engine_dir": "/path/to/openssl-1.1.1/engines",
+      "libcrypto_path": "/path/to/openssl-1.1.1/lib/libcrypto.so.1.1"
+    }
+  },
+  "internal_broker": {
+    "host": "<INTERNAL_BROKER_HOST>",
+    "port": 8884,
+    "ca_certs": "/path/to/internal/ca.crt",
+    "certfile": "/path/to/internal/gateway-client.crt",
+    "keyfile": "/path/to/internal/gateway-client.key"
+  },
+  "cloud_broker": {
+    "host": "<CLOUD_BROKER_HOST>",
+    "port": 8883,
+    "ca_certs": "/path/to/cloud/ca.crt",
+    "certfile": "/path/to/cloud/gateway-client.crt",
+    "keyfile": "/path/to/cloud/gateway-client.key"
+  },
+  "topics": {
+    "data": "T1",
+    "producer_control": "benchmark/control/producer",
+    "producer_status": "benchmark/status/producer",
+    "consumer_control": "benchmark/control/consumer",
+    "consumer_status": "benchmark/status/consumer"
+  }
+}

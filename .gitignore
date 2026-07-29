@@ -1,0 +1,35 @@
+# Runtime outputs
+results/
+analysis_output/
+**/gateway.ready
+**/runtime_experiment_config.json
+**/run_manifest.json
+**/measurement_raw.csv
+**/gateway_timestamps.csv
+**/producer_timestamps.csv
+**/consumer_timestamps.csv
+**/resource_usage.csv
+**/gateway_native.log
+*.tmp
+
+# Secrets and machine-specific configs
+gateway/gateway_local_config.json
+producer/producer_local_config.json
+consumer/cloud_local_config.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
